@@ -1,6 +1,6 @@
 .mt{
 
-	background-color: $site-dark-color;
+	
 
 
 	.app-custom-safe-area{
@@ -17,16 +17,11 @@
 	}
 
 	.page{
-		background-color: transparent;
-		visibility: hidden;
-		pointer-events: none;
+		background-color: $site-dark-color;
 		overflow: hidden;
-		opacity: 0;
 
 		&.page-current{
-			visibility: visible;
-			pointer-events: auto ;
-			opacity: 1;
+			
 		}
 
 		&.has-no-top-banner{
