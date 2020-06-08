@@ -2,147 +2,138 @@
 <template>
   <div id="app">
 
-    <!-- Left panel with cover effect-->
-    <div class="panel panel-left panel-cover theme-dark panel-init">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner">
-              <div class="title">Left Panel</div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="block">Left panel content goes here</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Right panel with reveal effect-->
-    <div class="panel panel-right panel-reveal theme-dark">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner">
-              <div class="title">Right Panel</div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="block">Right panel content goes here</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+   
 
     <!-- Views/Tabs container -->
-    <div class="views tabs safe-areas">
+    <div class="views tabs safe-areas app-custom-safe-area">
       <!-- Tabbar for switching views-tabs -->
-      <div class="toolbar toolbar-bottom tabbar-labels">
+
+
+      <!-- my app tab link bar -->
+      <div class="toolbar toolbar-bottom tabbar-labels app-custom-switching-tab">
         <div class="toolbar-inner">
-          <a href="#view-home" class="tab-link tab-link-active">
-            <i class="icon f7-icons if-not-md">house_fill</i>
-            <i class="icon material-icons if-md">home</i>
-            <span class="tabbar-label">Home</span>
+           <a href="/" class="link start-page-link" data-force="true">
+            <img src="static/images/shop-tab-link-dark.svg" class="normal-img" width="30">
+            <img src="static/images/shop-tab-link-danger.svg" class="active-img" width="30">
           </a>
-          <a href="#view-catalog" class="tab-link">
-            <i class="icon f7-icons if-not-md">square_list_fill</i>
-            <i class="icon material-icons if-md">view_list</i>
-            <span class="tabbar-label">Catalog</span>
+          <a href="/catalog/" class="link" data-force="true">
+            <img src="static/images/tickets-dark.svg" class="normal-img" width="30">
+            <img src="static/images/tickets-danger.svg" class="active-img" width="30">
           </a>
-          <a href="#view-settings" class="tab-link">
-            <i class="icon f7-icons if-not-md">gear</i>
-            <i class="icon material-icons if-md">settings</i>
-            <span class="tabbar-label">Settings</span>
+          <a href="#view-settings" class="link">
+            <img src="static/images/star-tab-link-dark.svg" class="normal-img" width="25">
+            <img src="static/images/star-tab-link-danger.svg" class="active-img" width="25">
+          </a>
+          <a href="#view-app-start-page" class="link">
+            <img src="static/images/ground-tab-link-dark.svg" class="normal-img" width="33">
+            <img src="static/images/ground-tab-link-danger.svg" class="active-img" width="33">
+          </a>
+          <a href="#view-settings" class="link">
+            <img src="static/images/two-hand-man-dark.svg" class="normal-img" width="30">
+            <img src="static/images/two-hand-man-danger.svg" class="active-img" width="30">
           </a>
         </div>
       </div>
 
       <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
-      <div id="view-home" class="view view-main view-init tab tab-active" data-url="/">
+      <div id="view-app-start-page" class="view view-main view-init tab tab-active custom-view-main" data-url="/">
         <!-- Home page will be loaded here dynamically from / route -->
       </div>
-
-      <!-- Catalog View -->
-      <div id="view-catalog" class="view view-init tab" data-view="catalog" data-url="/catalog/">
-        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
-      </div>
-
-      <!-- Settings View -->
-      <div id="view-settings" class="view view-init tab" data-view="settings" data-url="/settings/">
-        <!-- Settings page will be loaded here dynamically from /settings/ route -->
-      </div>
     </div>
 
-
-    <!-- Popup -->
-    <div class="popup" id="my-popup">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner">
-              <div class="title">Popup</div>
-              <div class="right">
-                <a href="#" class="link popup-close">Close</a>
-              </div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="block">
-              <p>Popup content goes here.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Login Screen -->
-    <div class="login-screen" id="my-login-screen">
-      <div class="view">
-        <div class="page">
-          <div class="page-content login-screen-content">
-            <div class="login-screen-title">Login</div>
-            <div class="list">
-              <ul>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-label">Username</div>
-                    <div class="item-input-wrap">
-                      <input type="text" name="username" placeholder="Your username" value="{{username}}" @input="updateUsername">
-
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-label">Password</div>
-                    <div class="item-input-wrap">
-                      <input type="password" name="password" placeholder="Your password" value="{{password}}" @input="updatePassword">
-
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="list">
-              <ul>
-                <li>
-                  <a href="#" class="item-link list-button login-button" @click="alertLoginData">Sign In</a>
-
-                </li>
-              </ul>
-              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </template>
 <script>
+import $$ from 'dom7';
   export default {
+
+    // custom global start
+      on: {
+      pageMounted: function(e, page) {
+        this.$f7ready((f7) => {
+
+
+        // libs
+       var scriptOwl = ['static/js/lib/owl.carousel.js'];
+       $.getScript(scriptOwl, function(data, textStatus) {
+          // news teaser carousel
+          $('.news-teaser-module.with-carousel .owl-carousel').owlCarousel({
+              loop:false,
+              dots:false,
+              margin:0,
+              nav:true,
+              items: 1
+          });  
+      });
+
+
+
+       
+        //app-custom-switching-tab
+        jQuery('.app-custom-switching-tab .toolbar-inner a:first-child').addClass('active');
+
+        jQuery('.app-custom-switching-tab .toolbar-inner a').click(function(e){
+          jQuery('.app-custom-switching-tab .toolbar-inner a').removeClass('active');
+          jQuery(this).addClass('active');
+          e.stopPropagation();
+        });
+
+         // set back start
+
+          jQuery('.set-back').each(function(){
+
+           var SETBACK = jQuery(this).find('img').attr('src');
+            jQuery(this).css('background-image', 'url(' + SETBACK + ')');
+
+          });
+
+          // set back end
+          
+          // object notation start
+          var site = {}
+
+          site.HeaderHeightScrollFunction = function() {
+
+               var HEADERHEIGHT = jQuery('header.header').height();
+
+               var BANNERHEIGHT = jQuery('.top-banner-module').height();
+
+               var LESSBANNERHEIGHT = BANNERHEIGHT - 400;
+
+
+                jQuery('.has-top-banner.page-current .page-content').on('scroll', function() {
+                    if ($('.has-top-banner.page-current .page-content').scrollTop() > 100) {
+                        $('header.header').addClass('scrolled');
+                    }
+                    else {
+                        $('header.header').removeClass('scrolled');
+                    }
+                });
+
+               
+
+            };
+
+            jQuery('.start-page-link').click(function() {
+               location.reload();
+            });
+
+
+             site.HeaderHeightScrollFunction();
+
+
+
+          // object notation end
+
+
+        });
+      },
+  },
+  // custom global end
+
+
     data() {
       return {
         user: {
