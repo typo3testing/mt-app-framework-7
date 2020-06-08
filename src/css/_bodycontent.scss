@@ -25,7 +25,11 @@
 		}
 
 		&.has-no-top-banner{
-			padding-top: 70px;
+			
+
+			.page-content{
+				padding-top: 70px;
+			}
 		}
 	}
 

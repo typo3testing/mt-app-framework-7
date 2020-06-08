@@ -1,5 +1,26 @@
 .mt{
 
+
+    .fake-nav-bar{
+        visibility: hidden;
+        pointer-events: none;
+        height: 0px;
+        min-height: inherit;
+        position: fixed;
+
+        &.navbar-large-collapsed{
+            & + header.header{
+                background: url(../static/images/fixed-header-back.svg) no-repeat left bottom;
+                background-size: cover;
+
+                & > .main-wrap{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+
     header.header{
     	width: 100%;
     	position: fixed;
