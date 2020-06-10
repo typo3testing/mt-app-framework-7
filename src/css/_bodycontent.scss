@@ -1,10 +1,19 @@
-.mt{
+html{
 
-	
+}
+
+
+.mt{
 
 
 	.app-custom-safe-area{
 		height: 100vh;
+
+		&.has-beging-overlay{
+			.custom-view-main{
+				height: 100vh;
+			}
+		}
 	}
 
 	.page-content{
@@ -28,7 +37,7 @@
 			
 
 			.page-content{
-				padding-top: 70px;
+				padding-top: 110px;
 			}
 		}
 	}
@@ -1070,6 +1079,9 @@
 			height: 100%;
 			left: 0px;
 			top: 0px;
+			background-size: cover;
+			background-position: center top;
+			background-repeat: no-repeat;
 
 			&.set-back{
 				background-size: cover;
@@ -1252,12 +1264,13 @@
 
 						& > div{
 							
-							width: 216px;
+							width: 47%;
 							min-width: inherit;
 							
 
 							&.type-one{
 								text-align: left;
+								margin-right: -2px;
 
 								span{
 									text-align: left;
@@ -1266,6 +1279,7 @@
 
 							&.type-two{
 								text-align: right;
+								margin-left: -2px;
 
 								span{
 									text-align: right;
@@ -1280,8 +1294,9 @@
 						}
 
 						& > hr{
-							margin: 0 10px;
-							width: 5px;
+							margin: 0;
+							padding: 0;
+							width: 6%;
 							height: 17px;
 							&:before{
 								background: #ffffff;
@@ -1696,6 +1711,79 @@
 
 	/*tabelle-content-module*/
 	.tabelle-content-module{
+			
+
+			.tebelle-app-extended-info{
+				margin-top: 5px;
+				display: none;
+				table{
+					margin: 0px;
+					padding: 0px;
+				}
+
+				th, td{
+					font-size: 10px !important;
+					font-family: $site-third-font;
+					font-weight: $site-third-font-bold;
+					padding: 5px 5px 0 0 !important;
+					text-align: left;
+					border: none !important;
+					background-color: transparent !important;
+					min-width: 30px;
+				}
+
+				th{
+					color: $site-dark-color-type-four;
+				}
+			}
+
+		.the-tabelle{
+			&.app-view{
+				padding: 15px 20px 20px 20px;
+				border-radius: 15px;
+				background-color: $site-dark-color-type-three;
+				margin-bottom: 10px;
+
+
+				.tebelle-app-view-team-head{
+					margin-bottom: 5px;
+					.main-wrap{
+						padding-top: 5px;
+						padding-bottom: 5px;
+						border-bottom: 1px solid;
+						border-color: rgba(255,255,255,0.5);
+						display: flex;
+						flex-wrap: wrap;
+
+						& > div{
+							width: 50%;
+							flex-grow: 1;
+							font-size: 10px;
+							font-family: $site-third-font;
+							font-weight: $site-third-font-regular;
+						}
+
+						.left{
+							text-align: left;
+							padding-right: 5px;
+						}
+
+						.right{
+							text-align: right;
+							padding-left: 5px;
+						}
+					}
+				}
+
+				.tickting-button-wrap{
+					margin-top: 10px;
+					display: none;
+					div{
+						margin-top: 5px;
+					}
+				}
+			}
+		}
 
 		.the-tabelle{
 			table{
@@ -1880,9 +1968,10 @@
 
 			th, td{
 				
-				padding: 15px 10px;
+				padding: 5px;
 				position: relative;
 				z-index: 1;
+				
 
 				strong{
 					font-family: $site-forth-font-bold;
@@ -1898,12 +1987,13 @@
 			}
 
 			th{
-				font-size: 19px;
+				font-size: 13px;
 				line-height: normal;
 				text-transform: uppercase;
+				vertical-align: middle;
 
 				&.lg-tag{
-					font-size: 25px;
+					font-size: 23px;
 				}
 
 
@@ -1911,32 +2001,38 @@
 
 			td{
 				font-family: $site-forth-font-regular;
-				font-size: 17px;
+				font-size: 10px;
 				border-top: 1px solid;
+				vertical-align: top;
+
+				&:not(.team-iconi-td){
+					padding-top: 12px;
+				}
 			}
 
 
 			.tabelle-team-info{
 				i{
 					display: inline-block;
-					vertical-align: middle;
-					width: 30px;
-					margin-right: 10px;
+					vertical-align: top;
+					width: 25px;
+					margin-right: 5px;
 
 					&.no-img{
-						width: 30px;
-						height: 30px;
+						width: 25px;
+						height: 25px;
 						background-color: #fff;
 					}
 
 					img{
-						width: 30px;
+						width: 25px;
 					}
 				}
 
 				span{
 					display: inline-block;
-					vertical-align: middle;
+					vertical-align: top;
+					margin-top: 7px;
 				}
 			}
 		}	
@@ -2540,6 +2636,11 @@
 				padding-top: 120px;
 				padding-bottom: 80px;
 
+				&.single-stand{
+					padding-top: 0px;
+					padding-bottom: 0px;
+				}
+
 				.detail-player-primary-info{
 
 					.player-img{
@@ -2662,42 +2763,40 @@
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
-				margin-left: -10px;
-				margin-right: -10px;
+				
 
 				& > div{
 					flex-grow: 1;
-					padding-left: 10px;
-					padding-right: 10px;
+					
+					&.active{
+						padding-left: 10px;
+						padding-right: 10px;
+					}
 
 					&.prev{
 						i{
 							background-image: url(../static/images/carousel-prev.svg);
-							margin-right: 25px;
 						}
 					}
 
 					&.active{
-						span{
-							font-size: 70px;
-						}
+						
 					}
 
 					&.next{
 						i{
 							background-image: url(../static/images/carousel-next.svg);
-							margin-left: 25px;
 						}
 					}
 
 					i{
 						display: inline-block;
 						vertical-align: middle;
-						width: 42px;
-						height: 75px;
+						width: 12px;
+						height: 20px;
 						background-repeat: no-repeat;
 						background-position: left top;
-						background-size: 42px;
+						background-size: cover;
 					}
 
 					span{
@@ -2726,7 +2825,7 @@
 					display: inline-block;
 					vertical-align: middle;
 
-					&.current, &:hover{
+					&.current{
 
 						.item{
 							& > div{
@@ -2756,8 +2855,8 @@
 
 					& > div{
 						display: inline-block;
-						padding: 10px 5px;
-						border-bottom: 4px solid transparent;
+						padding: 5px;
+						border-bottom: 2px solid transparent;
 
 						i{
 							display: inline-block;
@@ -2776,7 +2875,7 @@
 						span{
 							display: inline-block;
 							vertical-align: middle;
-							font-size: 28px;
+							font-size: 15px;
 							letter-spacing: 1.96px;
 							text-transform: uppercase;
 						}
@@ -4206,7 +4305,7 @@
 		&.type-one{
 
 			.img-holder{
-				background-position: left center;
+				background-position: left top 110px;
 				background-size: 200px auto;
 			}
 			
@@ -4217,6 +4316,48 @@
 		}
 	}
 	/*app product teaser*/
+
+	/*app custom overlay*/
+	.app-custom-overlay{
+		height: 100vh;
+		width: 100%;
+		overflow-y: auto;
+		position: fixed;
+		z-index: 2654798465184651654984651649465;
+		background-color: rgba($site-light-danger-color, 0.32);
+		padding: 35px 20px;
+
+		&.begining-view-overlay{
+			& + .app-custom-switching-tab{
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+
+
+		.main-overlay-wrap{
+			border-radius: 20px;
+			padding: 65px 20px 70px 20px;
+			position: relative;
+
+			&.dark{
+				background-color: $site-dark-color;
+			}
+		}
+
+		.close-overlay{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			width: 25px;
+			height: 25px;
+			background-repeat: no-repeat;
+			background-position: left top;
+			background-size: cover;
+			background-image: url(../static/images/close-icon-white.svg);
+		}
+	}
+	/*app custom overlay*/
 
 
 }

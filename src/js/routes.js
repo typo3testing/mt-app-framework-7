@@ -12,11 +12,16 @@ import NotFoundPage from '../pages/404.f7.html';
 
 
 import AppStartPage from '../pages/app-start-page.f7.html';
+import AppGroundTicketPage from '../pages/app-ground-ticket-page.f7.html';
 
 var routes = [
   {
     path: '/',
     component: AppStartPage,
+  },
+  {
+    path: '/app-ground-ticket-page/',
+    component: AppGroundTicketPage,
   },
   {
     path: '/home/',
