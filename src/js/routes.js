@@ -13,6 +13,10 @@ import NotFoundPage from '../pages/404.f7.html';
 
 import AppStartPage from '../pages/app-start-page.f7.html';
 import AppGroundTicketPage from '../pages/app-ground-ticket-page.f7.html';
+import AppTeamColorPage from '../pages/app-team-color-page.f7.html';
+import AppKaderPage from '../pages/app-kader-page.f7.html';
+
+
 
 var routes = [
   {
@@ -22,6 +26,14 @@ var routes = [
   {
     path: '/app-ground-ticket-page/',
     component: AppGroundTicketPage,
+  },
+  {
+    path: '/app-team-color-page/',
+    component: AppTeamColorPage,
+  },
+  {
+    path: '/app-kader-page/',
+    component: AppKaderPage,
   },
   {
     path: '/home/',

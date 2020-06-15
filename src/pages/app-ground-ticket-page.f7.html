@@ -42,6 +42,36 @@
          
 
         </div>
+
+        <!-- mega menu -->
+        <div class="app-mega-menu animated slideOutRight inactive clearfix">
+          <div class="main-holder">
+
+            <div class="menu-part">
+              <ul>
+                <li><a href="#"><span>MEIN PROFIL</span></a></li>
+                <li><a href="#"><span>WARENKORB</span><i>3</i></a></li>
+                <li><a href="#"><span>MEINE BESTELLUNGEN</span></a></li>
+                <li><a href="#"><span>AUSLOGGEN</span></a></li>
+              </ul>
+            </div>
+
+
+             <div class="menu-part type-two">
+              <ul>
+                <li><a href="#"><span>BENACHRICHTIGUNGEN</span></a></li>
+                <li><a href="#"><span>KONTAKT</span></a></li>
+                <li><a href="#"><span>MT WEBSITE</span></a></li>
+                <li><a href="#"><span>HILFE</span></a></li>
+                <li><a href="#"><span>DATENSCHUTZ</span></a></li>
+                <li><a href="#"><span>IMPRESSUM</span></a></li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- mega menu -->
     </header>
     <!-- header -->
 
@@ -751,7 +781,79 @@
   </div>
 </template>
 <script>
+import $$ from 'dom7';
 export default {
- 
+  // custom 
+      on: {
+      pageMounted: function(e, page) {
+        this.$f7ready((f7) => {
+
+
+      // libs
+       var scriptOwl = ['static/js/lib/owl.carousel.js'];
+       $.getScript(scriptOwl, function(data, textStatus) {
+           // info-tab-link-carousel var - 1
+          $('.kader-module .link-tab-varient.var-1 .info-tab-link-carousel .owl-carousel').owlCarousel({
+                  loop: false,
+                  dots: false,
+                  margin: 30,
+                  nav: false,
+                  items: 3,
+              });  
+      });
+      // libs
+      
+
+      // object notation start
+          var site = {}
+
+            site.KADERTABSLIDERVAR1 = function() {
+
+               jQuery('.kader-module .link-tab-varient .info-tab-link-carousel .owl-item:first-child').each(function(){
+              jQuery(this).addClass('current');
+              var KADERTABCONTENT = jQuery(this).find('.carousel-context').html();
+              jQuery(this).parents('.detail-player-secondary-info').find('.info-tab-body').html(KADERTABCONTENT);
+            });
+
+            jQuery(document).on( "click", ".kader-module .link-tab-varient .info-tab-link-carousel .owl-item", function(e) {
+              jQuery(this).addClass('current');
+              jQuery(this).parents('.info-tab-link-carousel').find('.owl-item').not(this).removeClass('current');
+              var KADERTABCONTENT = jQuery(this).find('.carousel-context').html();
+              jQuery(this).parents('.detail-player-secondary-info').find('.info-tab-body').html(KADERTABCONTENT);
+              e.stopPropagation();
+            });
+
+          
+
+            };
+
+            setTimeout(function() {
+                site.KADERTABSLIDERVAR1();
+            }, 400);
+
+
+            
+            jQuery(document).on("click", ".the-tabelle.app-view",  function(e){
+              jQuery('.tickting-button-wrap').hide();
+              jQuery(this).find('.tickting-button-wrap').show();
+              e.stopPropagation();
+            });
+
+
+            jQuery(document).on("click", ".trigger-extended-info",  function(){
+              jQuery(this).find('.tebelle-app-extended-info').show();
+            });
+            
+
+
+
+          // object notation end
+    
+
+
+        });
+      },
+  },
+  // custom
 };
 </script>

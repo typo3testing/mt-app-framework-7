@@ -1,12 +1,13 @@
 
     .page-with-navbar-large-collapsed{
         header.header{
-                background: url(../static/images/fixed-header-back.svg) no-repeat left bottom;
-                background-size: cover;
+                
 
                 & > .main-wrap{
                     padding-left: 20px;
                     padding-right: 20px;
+                    background: url(../static/images/fixed-header-back.svg) no-repeat left bottom;
+                    background-size: cover;
                 }
         }
     }
@@ -33,10 +34,23 @@
         height: 70px;
         z-index: 5001;
 
+        &.app-menu-open{
+            
+
+             & > .main-wrap{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    background: url(../static/images/fixed-header-back.svg) no-repeat left bottom;
+                    background-size: cover;
+                }
+        }
+
         & > .main-wrap{
             transition: all 0.3s ease 0s;
             padding-top: 10px;
             padding-bottom: 10px;
+            position: relative;
+            z-index: 2;
         }
 
 
@@ -83,12 +97,13 @@
 
         &.scrolled{
 
-            background: url(../static/images/fixed-header-back.svg) no-repeat left bottom;
-            background-size: cover;
+           
 
             & > .main-wrap{
                 padding-left: 20px;
                 padding-right: 20px;
+                background: url(../static/images/fixed-header-back.svg) no-repeat left bottom;
+                background-size: cover;
             }
         }
 
@@ -207,6 +222,18 @@
                 background-image: url(../static/images/menu-hamberg.svg);
                 background-position: left top;
                 background-size: cover;
+
+                &.active{
+                    background-image: url(../static/images/close-icon-white.svg);
+                    width: 25px;
+                    height: 25px;
+                }
+
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
 
@@ -639,5 +666,101 @@
 
     	
     }
+
+    /*app-mega-menu*/
+    .app-mega-menu{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        overflow-y: auto;
+        z-index: 1;
+
+        &.inactive{
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        & > .main-holder{
+            padding: 90px 15px 170px 15px;
+            background-color: $site-dark-color;
+        }
+
+        .menu-part{
+            
+            margin-top: 50px;
+
+            &:first-child{
+                margin-top: 0px;
+            }
+
+            ul{
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+
+                li{
+                    margin: 0px;
+                    padding: 0px;
+                    font-size: 21px;
+                    text-transform: uppercase;
+                    background-image: url(../static/images/carousel-next.svg);
+                    background-position: right center;
+                    background-repeat: no-repeat;
+                    background-size: 12px;
+                    border-bottom: 1px solid rgba(255,255,255, 0.5);
+                    border-top: 1px solid rgba(255,255,255, 0.5);
+
+
+                    a{
+                        display: block;
+                        padding: 15px 20px 15px 10px;
+
+                        span{
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+
+                        i{
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 100%;
+                            background-color: $site-danger-color;
+                            text-align: center;
+                            line-height: 20px;
+                            font-size: 11px;
+                            font-family: $site-third-font;
+                            font-weight: $site-third-font-bold;
+                            font-style: normal;
+                            margin-left: 6px;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+
+            &.type-two{
+                ul{
+                    li{
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            &:first-child{
+                ul{
+                    li{
+                        &:first-child{
+                            border-top: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*app-mega-menu*/
     
 }
