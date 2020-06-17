@@ -103,17 +103,30 @@ import $$ from 'dom7';
 
     // custom global start
       on: {
+
+
+   
+
+      pageAfterIn: function(e, page) {
+          this.$f7ready((f7) => {
+
+
+
+            // toolbar active
+            jQuery('.custom-view-main .page.page-current').each(function(){
+              var CURRENTPAGEDATANAME =  jQuery(this).attr('data-name');
+              jQuery('.app-custom-switching-tab a').removeClass('active');
+              jQuery('.app-custom-switching-tab').find('.' + CURRENTPAGEDATANAME).addClass('active');
+            });
+            // toolbar active
+
+          });
+      },  
+
+
+
       pageMounted: function(e, page) {
         this.$f7ready((f7) => {
-
-        //app-custom-switching-tab
-        setTimeout(function() {
-        jQuery('.custom-view-main .page.page-current').each(function(){
-          var CURRENTPAGEDATANAME =  jQuery(this).attr('data-name');
-          jQuery('.app-custom-switching-tab a').removeClass('active');
-          jQuery('.app-custom-switching-tab').find('.' + CURRENTPAGEDATANAME).addClass('active');
-        });
-      }, 400);
 
          // set back start
 
@@ -139,12 +152,11 @@ import $$ from 'dom7';
           });
           // custom overlay
           
-           // app-mega-menu
-          setTimeout(function() {
-             jQuery('.app-mega-menu').removeClass('inactive');
-          }, 1000);
+          // app-mega-menu
+        
 
           jQuery('.main-menu').click(function(){
+            jQuery('.app-mega-menu').show();
             jQuery('.app-mega-menu').toggleClass('slideInRight');
             jQuery('.app-mega-menu').toggleClass('slideOutRight');
             jQuery('header.header').toggleClass('app-menu-open');

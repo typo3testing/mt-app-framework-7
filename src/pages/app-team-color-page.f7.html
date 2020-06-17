@@ -17,33 +17,6 @@
 <script>
 import $$ from 'dom7';
 export default {
-  // custom 
-      on: {
-      pageMounted: function(e, page) {
-        this.$f7ready((f7) => {
-
-
-        // libs
-       var scriptOwl = ['static/js/lib/owl.carousel.js'];
-       $.getScript(scriptOwl, function(data, textStatus) {
-          // news teaser carousel
-          $('.news-teaser-module.with-carousel .owl-carousel').owlCarousel({
-              loop:false,
-              dots:false,
-              margin:0,
-              nav:true,
-              items: 1
-          });
-      });
-      // libs
-      
-
-        
-
-
-        });
-      },
-  },
-  // custom
+ 
 };
 </script>

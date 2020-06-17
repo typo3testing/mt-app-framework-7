@@ -6,6 +6,11 @@ html{
 .mt{
 
 
+	.table-responsive{
+		border: none;
+	}
+
+
 	.app-custom-safe-area{
 		height: 100vh;
 
@@ -214,6 +219,10 @@ html{
 	.flex-row{
 		display: flex;
 		flex-wrap: wrap;
+
+		&.flex-vertical{
+			align-items: center;
+		}
 
 		& > .my-col{
 			float: none;
@@ -1494,6 +1503,21 @@ html{
 			line-height: 56px;
 		}
 
+		h2{
+			font-size: 36px;
+			line-height: 40px;
+		}
+
+		h3{
+			font-size: 27px;
+			line-height: 34px;
+		}
+
+		h4{
+			font-size: 21px;
+			line-height: normal;
+		}
+
 		&.light{
 			& *{
 				color: #ffffff;
@@ -1690,8 +1714,7 @@ html{
 					top: inherit;
 					width: auto;
 					margin: 0px;
-					display: inline-block;
-					vertical-align: middle;
+					float: right;
 
 					button{
 						float: none;
@@ -1699,7 +1722,16 @@ html{
 						vertical-align: middle;
 						width: 24px;
 						height: 45px;
-						margin: 0 20px;
+						margin: 0;
+
+						&.owl-prev{
+							margin-right: 10px;
+						}
+
+						&.owl-next{
+							float: right;
+							margin-left: 10px;
+						}
 					}
 				}
 				
@@ -2143,25 +2175,24 @@ html{
 
 
 		h4{
-			font-size: 30px;
+			font-size: 20px;
 			font-family: $site-third-font;
 			font-weight: $site-third-font-bold;
-			line-height: 35px;
+			line-height: normal;
 			margin-bottom: 0px;
 		}
 
 		h5{
-			font-size: 21px;
+			font-size: 16px;
 			font-family: $site-third-font;
 			font-weight: $site-third-font-light;
-			line-height: 35px;
+			line-height: normal;
 			margin-bottom: 50px;
 		}
 
 		p{
-			font-size: 21px;
-    		line-height: 35px;
-    		margin-bottom: 120px;
+			font-size: 16px;
+    		line-height: normal;
 		}
 
 
@@ -2188,13 +2219,7 @@ html{
 		}
 
 		.img-holder{
-
-			float: left;
-			width: 50%;
-			
-			.main-wrap{
-				padding: 35px 0 60px 0;
-			}
+			margin-bottom: 30px;
 
 			img{
 				width: 100%;
@@ -2203,36 +2228,33 @@ html{
 		}
 
 		.sliding-part{
-			width: 50%;
-			float: left;
+			
 			
 
 			.owl-carousel{
-				padding-left: 190px;
-				padding-bottom: 60px;
+				
 				padding-right: 0px;
-				padding-top: 0px;
+				padding-top: 39px;
 
 				&:before{
 						content: ' ';
-						width: 190px;
+						width: 100%;
 						display: block;
-						height: calc(100% - 60px);
+						height: 40px;
 						pointer-events: none;
 						position: absolute;
 						left: 0px;
 						top: 0px;
 						background-image: url(../static/images/tickting-slider-part-bg.png);
-						background-position: left top;
+						background-position: center top;
 						background-repeat: no-repeat;
-						background-size: auto 100%;
-						background-color: #fff;
+						background-size: cover;
 					}
 				
 
 				.owl-stage-outer{
 					background-color: #ffffff;
-					margin-bottom: 0px;
+					margin-bottom: 30px;
 					height: 100%;
 				}
 
@@ -2247,7 +2269,7 @@ html{
 			
 			.item{
 				& > .main-wrap{
-					padding: 35px 35px 55px 0;
+					padding: 20px 30px;
 				}
 			}
 		}
@@ -2546,6 +2568,26 @@ html{
 	/*team-member-module*/
 
 	/*kader-module*/
+	
+	.kader-page-back-link{
+		display: none;
+
+		img{
+			width: 17px !important;
+			margin-top: 10px;
+		}
+
+		&.active{
+			display: inline-block;
+		}
+	}
+
+	.kader-page-hidden-logo{
+		&.inactive{
+			display: none;
+		}
+	}
+
 	.kader-module{
 
 		.kader-thumb{
@@ -2570,48 +2612,35 @@ html{
 			}
 
 			.info{
-				position: absolute;
+				position: relative;
 				width: 100%;
 				z-index: 1;
-				left: 0px;
-				bottom: -1px;
+				margin-top: -65px;
 				background-repeat: no-repeat;
-				background-position: left top;
-				background-size: cover;
-				background-image: url(../static/images/kader-back.png);
+				background-position: center top;
+				background-image: url(../static/images/kader-new-line.png);
 				text-align: right;
+				background-size: 100% auto;
 
 				.excerpt{
-					padding: 45px 0 12px 0;
-					display: inline-block;
+					padding-top: 30px;
 
 					.number{
-						font-size: 67px;
-						line-height: 3.35px;
+						font-size: 39px;
+						line-height: 1.95px;
 						font-family: $primary-font-outline;
-						display: inline-block;
-						vertical-align: bottom;
-						margin-right: 20px;
-						line-height: 62px;
-
-						&:last-child{
-							margin-right: 0px;
-						}
+						line-height: 44px;
+						margin-bottom: 10px;
 					}
 
 					.name{
 						
-						display: inline-block;
-						vertical-align: bottom;
-						text-align: left;
-
+						text-align: center;
 						.primary{
-							font-size: 36px;
-							line-height: 40px;
+							font-size: 21px;
+							line-height: 25px;
 							text-transform: uppercase;
-							letter-spacing: 2.52px;
-							margin-bottom: 15px;
-							padding-right: 25px;
+							letter-spacing: 1.47px;
 						}
 
 						.secondary{
@@ -2633,11 +2662,15 @@ html{
 
 		.kader-detail-view{
 
-				padding-top: 120px;
-				padding-bottom: 80px;
+				padding-top: 45px;
+				padding-bottom: 45px;
 
 				&.single-stand{
 					padding-top: 0px;
+					padding-bottom: 0px;
+				}
+
+				&.single-stand-no-bottom{
 					padding-bottom: 0px;
 				}
 
@@ -2645,7 +2678,7 @@ html{
 
 					.player-img{
 						text-align: center;
-						margin-bottom: 45px;
+						margin-bottom: 20px;
 
 						&:last-child{
 							margin-bottom: 0px;
@@ -2678,21 +2711,23 @@ html{
 
 					.name{
 						.primary{
-							font-size: 56px;
-							letter-spacing: 3.92px;
+							font-size: 31px;
+							line-height: 34px;
+							letter-spacing: 2.17px;
 							text-transform: uppercase;
 						}
 
 						.secondary{
-							font-size: 25px;
+							font-size: 13px;
+							line-height: 16px;
 							font-family: $site-third-font;
 							font-weight: $site-third-font-light;
 						}
 					}
 
 					.number{
-						font-size: 105px;
-						letter-spacing: 5.25px;
+						font-size: 59px;
+						letter-spacing: 2.95px;
 						font-family: $primary-font-outline;
 						line-height: normal;
 					}
@@ -2706,7 +2741,7 @@ html{
 
 					td{
 						padding: 16px 0 16px 0;
-						font-size: 28px;
+						font-size: 15px;
 						text-transform: uppercase;
 						border-bottom: 1px solid;
 
@@ -2733,7 +2768,6 @@ html{
 		}
 
 		.kader-social{
-			margin-right: 30px;
 			display: inline-block;
 			vertical-align: middle;
 			
@@ -2744,7 +2778,7 @@ html{
 			a{
 				display: inline-block;
 				vertical-align: top;
-				margin-right: 30px;
+				margin-right: 10px;
 
 				&:last-child{
 					margin-right: 0px;
@@ -2825,10 +2859,11 @@ html{
 					display: inline-block;
 					vertical-align: middle;
 
-					&.current{
+					a.active, a.tab-link-active{
 
-						.item{
-							& > div{
+						color: $site-danger-color;
+
+							div{
 
 							border-color: $site-danger-color;
 
@@ -2846,17 +2881,24 @@ html{
 								color: $site-danger-color;
 							}
 						}
-						}
+						
 					}
 				}
 				.item{
 					text-align: center;
 					cursor: pointer;
 
-					& > div{
+					a{
+							display: block;
+							color: white;
+						}
+
+					div{
 						display: inline-block;
 						padding: 5px;
 						border-bottom: 2px solid transparent;
+
+
 
 						i{
 							display: inline-block;
@@ -2888,6 +2930,14 @@ html{
 			margin-top: 25px;
 		}
 
+	}
+
+	.info-tab-body{
+		.tab{
+			&.tab-active{
+				display: block;
+			}
+		}
 	}
 	/*kader-module*/
 
