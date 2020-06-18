@@ -81,7 +81,7 @@
             <img src="static/images/ground-tab-link-dark.svg" class="normal-img" width="33">
             <img src="static/images/ground-tab-link-danger.svg" class="active-img" width="33">
           </a>
-          <a href="#view-settings" class="link">
+          <a href="/app-video-page/" class="link app-video-page" data-force="true">
             <img src="static/images/two-hand-man-dark.svg" class="normal-img" width="30">
             <img src="static/images/two-hand-man-danger.svg" class="active-img" width="30">
           </a>
@@ -163,6 +163,17 @@ import $$ from 'dom7';
             jQuery('.menu-hamberg').toggleClass('active');
           }); 
       // app-mega-menu
+      
+      // general back link
+      jQuery('.trigger-initiate-back-link').click(function(){
+              jQuery('.general-component-back-link').addClass('active');
+              jQuery('.page-hidden-logo').addClass('inactive');
+       });
+
+      jQuery(document).on( "click", ".general-component-back-link", function(event) {
+              jQuery('.general-component-back-link').removeClass('active');
+              jQuery('.page-hidden-logo').removeClass('inactive');  
+      });
 
 
         });

@@ -6,6 +6,26 @@ html{
 .mt{
 
 
+	.general-component-back-link{
+		display: none;
+
+		img{
+			width: 17px !important;
+			margin-top: 10px;
+		}
+
+		&.active{
+			display: inline-block;
+		}
+	}
+
+	.page-hidden-logo{
+		&.inactive{
+			display: none;
+		}
+	}
+
+
 	.table-responsive{
 		border: none;
 	}
@@ -338,25 +358,25 @@ html{
 	h3{
 		font-size: 15px;
 		line-height: 18px;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 
 	h4{
 		font-size: 12px;
 		line-height: 15px;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 
 	h5{
 		font-size: 12px;
 		line-height: 15px;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 
 	h6{
 		font-size: 12px;
 		line-height: 15px;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 
 	p{
@@ -1567,12 +1587,12 @@ html{
 	/*video-slider-module*/
 	.video-slider-module{
 		padding: 55px 40px 95px 40px;
-		background: url(../static/images/video-carousel-background.svg) no-repeat left bottom;
+		background: url(../static/images/video-carousel-background-new.svg) no-repeat left bottom;
 		background-size: cover;
 
 
 		.item-img{
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 
 			img{
 				width: 100%;
@@ -1581,9 +1601,32 @@ html{
 		}
 
 		.item-title{
-			font-size: 19px;
-			line-height: 27px;
+			font-size: 15px;
+			line-height: 20px;
 			text-transform: uppercase;
+		}
+
+		.video-items-in-carousel{
+			&.general-carousel{
+				.owl-carousel{
+					.owl-nav{
+						margin-top: -20px;
+						button{
+							width: 23px;
+							height: 45px;
+							position: relative;
+
+							&.owl-prev{
+								left: -33px;
+							}
+
+							&.owl-next{
+								right: -33px;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	/*video-slider-module*/
@@ -2569,24 +2612,9 @@ html{
 
 	/*kader-module*/
 	
-	.kader-page-back-link{
-		display: none;
+	
 
-		img{
-			width: 17px !important;
-			margin-top: 10px;
-		}
-
-		&.active{
-			display: inline-block;
-		}
-	}
-
-	.kader-page-hidden-logo{
-		&.inactive{
-			display: none;
-		}
-	}
+	
 
 	.kader-module{
 
@@ -2801,6 +2829,7 @@ html{
 
 				& > div{
 					flex-grow: 1;
+					min-height: 22px;
 					
 					&.active{
 						padding-left: 10px;
@@ -2868,6 +2897,10 @@ html{
 							border-color: $site-danger-color;
 
 							i{
+
+								
+
+
 								.normal-img{
 									display: none;
 								}
@@ -2903,7 +2936,12 @@ html{
 						i{
 							display: inline-block;
 							vertical-align: middle;
-							margin-right: 10px;
+							margin-right: 5px;
+
+							img{
+									width: 25px;
+									height: auto;
+								}
 
 							.normal-img{
 								display: inline-block;

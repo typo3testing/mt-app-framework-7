@@ -16,6 +16,9 @@ import AppGroundTicketPage from '../pages/app-ground-ticket-page.f7.html';
 import AppTeamColorPage from '../pages/app-team-color-page.f7.html';
 import AppKaderPage from '../pages/app-kader-page.f7.html';
 import AppGroundSliderPage from '../pages/app-ground-slider-page.f7.html';
+import AppVideoPage from '../pages/app-video-page.f7.html';
+
+
 
 
 
@@ -41,6 +44,10 @@ var routes = [
   {
     path: '/app-ground-slider-page/',
     component: AppGroundSliderPage,
+  },
+  {
+    path: '/app-video-page/',
+    component: AppVideoPage,
   },
   {
     path: '/home/',
