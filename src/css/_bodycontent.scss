@@ -5,6 +5,81 @@ html{
 
 .mt{
 
+	.preloader-modal{background: transparent;}
+
+	.toolbar-hidden{
+		
+		& + .custom-view-main{
+			height: 100vh;
+		}
+	}
+
+
+	.app-back-link{
+		margin-top: 10px;
+		margin-left: 5px;
+		i{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 15px;
+		}
+
+		span{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 19px;
+			text-transform: uppercase;
+			letter-spacing: 1.33px;
+		}
+	}
+
+	.menu-item-dropdown{
+		position: relative;
+	}
+
+	.menu-dropdown{
+		height: auto;
+		position: absolute;
+		z-index: 1;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: white;
+		min-width: 300px;
+
+		&.menu-dropdown-right{
+			right: 0px;
+		}
+
+		.site-button{
+			span{
+				padding: 8px 15px;
+				font-size: 14px;
+			}
+		}
+	}
+
+	/*calendar-sheet*/
+	.calendar-sheet{
+		.toolbar-top{
+			background-color: $site-danger-color;
+		}
+	}
+
+	.calendar-day{
+		&.calendar-day-selected{
+			.calendar-day-number{
+				background-color: $site-danger-color;
+			}
+		}
+
+		&.calendar-day-today{
+			.calendar-day-number{
+				color: $site-danger-color;
+			}
+		}
+	}
+	/*calendar-sheet*/
+
 
 	.general-component-back-link{
 		display: none;
@@ -548,6 +623,11 @@ html{
 		margin-top: 0px !important;
 	}
 
+	.no-bottom-margin{
+		margin-bottom: 0px !important;
+	}
+
+
 
 	.row{
 		margin-left: - $custom-grid-gutter-width / 2;
@@ -607,6 +687,13 @@ html{
 	.container-fluid{
 		padding-left: $default-left-right-padding;
 		padding-right: $default-left-right-padding;
+
+		&.type-two{
+			padding-left: $larger-left-right-padding;
+			padding-right: $larger-left-right-padding;
+			padding-top: $larger-top-bottom-padding;
+			padding-bottom: $larger-top-bottom-padding;
+		}
 	}
 
 	button{
@@ -797,13 +884,15 @@ html{
 
 
 		&.with-calender{
-			padding: 14px 30px 14px 60px;
+			padding: 9px 15px 8px 45px;
 			background-image: url(../static/images/calendar-light.svg);
 			background-repeat: no-repeat;
 			background-position: left 15px center;
 			border: 2px solid #ffffff;
 			border-radius: 30px;
-			background-size: 25px;
+			background-size: 19px;
+			min-width: 105px;
+			text-align: right;
 			span{
 				padding: 0px;
 				border: none;
@@ -818,13 +907,15 @@ html{
 		}
 
 		&.with-search{
-			padding: 14px 60px 14px 30px;
+			padding: 9px 45px 8px 15px;
 			background-image: url(../static/images/search-light.svg);
 			background-repeat: no-repeat;
 			background-position: right 15px center;
 			border: 2px solid #ffffff;
 			border-radius: 30px;
-			background-size: 25px;
+			background-size: 19px;
+			min-width: 105px;
+			text-align: left;
 			span{
 				padding: 0px;
 				border: none;
@@ -880,6 +971,10 @@ html{
 		width: 100%;
 		height: 1000px;
 		position: relative;
+
+		&.type-fixed-height{
+
+		}
 
 		
 
@@ -997,7 +1092,7 @@ html{
 
 			&:after{
 				content: ' ';
-				display: block;	
+				display: none;	
 				width: 100%;
 				height: 80px;
 				position: absolute;
@@ -1025,22 +1120,18 @@ html{
 
 			&.type-content-outside{
 				
-				height: 800px;
+				height: 320px;
 				position: relative;		
 
 				.content-holder{
-						padding-top: 0px;
-						padding-bottom: 0px;
+						padding-top: 35px;
+						padding-bottom: 35px;
 						position: absolute;
 						width: 100%;
-						height: 100%;
 						left: 0px;
-						top: 0px;
+						top: inherit;
+						bottom: 0px;
 						pointer-events: none;
-				}
-
-				.news-detail-header{
-					margin-bottom: 225px;
 				}
 			
 
@@ -1182,13 +1273,13 @@ html{
 				
 				top: 40%;
 				border: none;
-				width: 40px;
-				height: 65px;
+				width: 20px;
+				height: 25px;
 				border-radius: 0px;
 				background-color: transparent;
 				background-position: right center;
 				background-repeat: no-repeat;
-				background-size: 37px;
+				background-size: cover;
 
 				
 				svg{
@@ -1196,12 +1287,12 @@ html{
 				}
 
 				&.next{
-					right: 70px;
+					right: 14px;
 					background-image: url(../static/images/carousel-next.svg);
 				}
 
 				&.previous{
-					left: 70px;
+					left: 14px;
 					background-image: url(../static/images/carousel-prev.svg);
 				}
 			}
@@ -2993,7 +3084,7 @@ html{
 		.the-listing{
 			& > .row{
 				& > .my-col{
-					margin-top: 190px;
+					margin-top: 25px;
 				}
 			}
 		}
@@ -3001,18 +3092,18 @@ html{
 
 		.news-list-filter{
 			.filter-button-row{
-				padding-top: 15px;
+				padding-top: 30px;
 				padding-bottom: 15px;
 				border-top: 2px solid;
 
 				&:first-child{
 					border: none;
+					padding-top: 0px;
 				}
 
 				.news-tags{
 					div{
-						margin-top: 0px;
-						margin-bottom: 20px;
+						
 
 
 						&.jplist-selected{
@@ -3043,50 +3134,81 @@ html{
 		
 
 		.news-tags{
-
+			margin-left: -5px;
+			margin-right: -5px;
 			div{
-				display: inline-block;
-				padding: 12px;
 				text-transform: uppercase;
-				font-size: 19px;
-				letter-spacing: 0.95px;
-				border-radius: 50px;
-				min-width: 175px;
+				letter-spacing: 0.6px;
+				width: 32.8%;
 				text-align: center;
-				margin: 10px;
 				color: #fff !important;
+				font-size: 12px;
+				padding: 0 5px;
+				display: inline-block;
+				margin-bottom: 10px;
+
+				span{
+					display: block;
+					padding: 8px;
+					border-radius: 50px;
+				}
 
 				&.danger-tag{
-					background-color: $site-danger-color;
+					span{
+						background-color: $site-danger-color;
+					}
+					
 				}
 
 				&.pretty-tag{
-					background-color: $site-pretty-color;
+					span{
+						background-color: $site-pretty-color;
+					}
+					
 				}
 
 				&.copper-tag{
-					background-color: $site-copper-color;
+					span{
+						background-color: $site-copper-color;
+					}
+					
 				}
 
 				&.success-tag{
-					background-color: $site-success-color;
+					span{
+						background-color: $site-success-color;
+					}
+					
 				}
 
 				&.Lightsuccess-tag{
-					background-color: $site-Lightsuccess-color;
+					span{
+						background-color: $site-Lightsuccess-color;
+					}
+					
 				}
 
 				&.grey-tag{
-					background-color: $site-grey-color;
+					span{
+						background-color: $site-grey-color;
+					}
+					
 				}
 			}
 		}
 
 		.the-listing{
 
+			.my-col{
+				.main-wrap{
+					padding-bottom: 12px;
+					border-bottom: 1px solid rgba(255,255,255,0.5);
+				}
+			}
+
 			.featured-img{
 				position: relative;
-				margin-bottom: 35px;
+				margin-bottom: 12px;
 
 				.news-tags{
 					position: absolute;
@@ -3103,11 +3225,11 @@ html{
 			}
 
 			.news-date{
-				font-size: 17px;
+				font-size: 10px;
 				line-height: normal;
 				font-family: $site-third-font;
 				font-weight: $site-third-font-bold;
-				margin-bottom: 30px;
+				margin-bottom: 10px;
 
 				span{
 					display: inline-block;
@@ -3115,10 +3237,9 @@ html{
 			}
 
 			.news-title{
-				font-size: 36px;
-				line-height: 55px;
+				font-size: 15px;
+				line-height: 21px;
 				text-transform: uppercase;
-				margin-bottom: 30px;
 			}
 
 			.news-excerpt{
@@ -3140,14 +3261,14 @@ html{
 	.news-detail-header{
 
 		.post-date{
-			font-size: 21px;
+			font-size: 12px;
 			font-family: $site-third-font;
 			font-weight: $site-third-font-regular;
 		}
 
 		.post-intro-title{
-			font-size: 68px;
-			line-height: 80px;
+			font-size: 21px;
+			line-height: 25px;
 			text-transform: uppercase;
 		}
 	}
@@ -3156,9 +3277,9 @@ html{
 
 		.news-intor-text{
 			p{
-				letter-spacing: 1.05px;
-				font-size: 21px;
-				line-height: 41px;
+				letter-spacing: 0.3px;
+				font-size: 14px;
+				line-height: 20px;
 				font-family: $site-third-font;
 				font-weight: $site-third-font-regular;
 			}
@@ -3170,6 +3291,8 @@ html{
 					font-family: $site-third-font;
 					font-weight: $site-third-font-regular;
 					margin-bottom: 50px;
+					font-size: 12px;
+					line-height: 20px;
 				}
 
 				li{
@@ -3537,14 +3660,14 @@ html{
 
 
 	select{
-			letter-spacing: 1.05px;
+			letter-spacing: 0.7px;
 			font-size: 21px;
 			color: $site-dark-color;
 			border: none;
 			background-color: transparent;
 			width: 100%;
 			height: 100%;
-			padding: 0 45px 0 25px;
+			padding: 0 35px 0 15px;
 			margin: 0px;
 		}
 
@@ -3554,13 +3677,29 @@ html{
 
 		.select-field{
 			position: relative;
-			border-radius: 41px;
+			border-radius: 27px;
 			background-color: #fff;
 			background-image: url(../static/images/down-arrow-dark.svg);
 			background-repeat: no-repeat;
-			background-position: right 20px center;
+			background-position: right 10px center;
 			background-size: 21px;
-			height: 57px; 
+			height: 35px;
+
+			&.outlined{
+				background-color: transparent;
+				border: 2px solid white;
+				background-image: url(../static/images/down-arrow-white.svg);
+				background-size: 15px;
+
+				select{
+					color: white;
+					font-size: 14px;
+				}
+
+				select option {
+					  background: rgba(0, 0, 0, 1.0);
+				}
+			} 
 		}
 		
 
@@ -4452,6 +4591,78 @@ html{
 		height: 100vh;
 	}
 	/*team-branding*/
+
+	/*the-termin-list-group*/
+	.the-termine-list{
+		padding: 15px;
+		background-color: $site-dark-color-type-five;
+		border-radius: 15px;
+		margin-top: 10px;
+
+		&:first-child{
+			margin-top: 0px;
+		}
+
+		.termine-date{
+			font-size: 10px;
+			font-family: $site-third-font;
+			font-weight: $site-third-font-bold;
+			line-height: normal;
+			margin-bottom: 5px;
+		}
+
+		.termine-title{
+			font-size: 15px;
+			line-height: 19px;
+			text-transform: uppercase;
+		}
+
+		.secondary{
+			padding-top: 20px;
+			display: none;
+		}
+
+		.termin-excerpt{
+				font-family: $site-third-font;
+				font-weight: $site-third-font-light;
+				font-size: 12px;
+				line-height: 19px;
+				letter-spacing: 0.6px;
+			}
+
+		.termin-featured-img{
+			margin-top: 15px;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}	
+	}
+	/*the-termin-list-group*/
+
+	/*login-box*/
+	.login-box{
+		padding: 30px;
+		border-radius: 22px;
+		color: $site-dark-color;
+		background-color: white;
+
+		.text-input{
+			color: $site-dark-color;
+			font-size: 12px;
+
+			&::placeholder{
+					color: $site-dark-color !important;
+				}
+		}
+
+		.site-form{
+			.form-col{
+				margin-top: 20px;
+			}
+		}
+	}
+	/*login-box*/
 
 
 }

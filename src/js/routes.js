@@ -17,6 +17,10 @@ import AppTeamColorPage from '../pages/app-team-color-page.f7.html';
 import AppKaderPage from '../pages/app-kader-page.f7.html';
 import AppGroundSliderPage from '../pages/app-ground-slider-page.f7.html';
 import AppVideoPage from '../pages/app-video-page.f7.html';
+import AppNewsPage from '../pages/app-news-page.f7.html';
+import AppLoginPage from '../pages/app-login-page.f7.html';
+import AppNewsDetailPage from '../pages/app-news-detail-page.f7.html';
+
 
 
 
@@ -48,6 +52,18 @@ var routes = [
   {
     path: '/app-video-page/',
     component: AppVideoPage,
+  },
+  {
+    path: '/app-news-page/',
+    component: AppNewsPage,
+  },
+  {
+    path: '/app-login-page/',
+    component: AppLoginPage,
+  },
+  {
+    path: '/app-news-detail-page/',
+    component: AppNewsDetailPage,
   },
   {
     path: '/home/',
