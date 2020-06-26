@@ -7,6 +7,14 @@ html{
 
 	.preloader-modal{background: transparent;}
 
+	.similar-no-banner-padding-top{
+		padding-top: 110px;
+	}
+
+	.similar-page-bottom-gap-type-one{
+		padding-bottom: 55px;
+	}
+
 	.toolbar-hidden{
 		
 		& + .custom-view-main{
@@ -157,7 +165,7 @@ html{
 
 	.site-alert{
 		display: block;
-		padding: 25px;
+		padding: 25px 15px;
 		border-radius: 45px;
 
 		i{
@@ -437,20 +445,20 @@ html{
 	}
 
 	h4{
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 15px;
+		line-height: 18px;
 		margin-bottom: 20px;
 	}
 
 	h5{
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 15px;
+		line-height: 18px;
 		margin-bottom: 20px;
 	}
 
 	h6{
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 15px;
+		line-height: 18px;
 		margin-bottom: 20px;
 	}
 
@@ -1091,8 +1099,7 @@ html{
 			}*/
 
 			&:after{
-				content: ' ';
-				display: none;	
+				content: ' ';	
 				width: 100%;
 				height: 80px;
 				position: absolute;
@@ -1136,7 +1143,7 @@ html{
 			
 
 				&:after{
-					height: 225px;
+					display: none;
 				}
 			}
 
@@ -3438,7 +3445,7 @@ html{
 		
 		& > .row{
 			& > .my-col{
-				margin-top: 120px;
+				margin-top: 30px;
 			}
 		}	
 
@@ -3483,7 +3490,7 @@ html{
 		}
 
 		.title{
-			font-size: 21px;
+			font-size: 16px;
 			letter-spacing: 1.05px;
 			text-transform: uppercase;
 			margin-bottom: 15px;
@@ -3546,6 +3553,10 @@ html{
 	/*site-form*/
 	.site-form{
 
+		.form-col{
+				margin-top: 25px;
+			}
+
 		.filed-group-title{
 			font-size: 26px;
 			line-height: 30px;
@@ -3564,16 +3575,16 @@ html{
 			position: relative;
 
 			.alert{
-				position: absolute;
 				width: 100%;
 				left: 0px;
-				top: 100%;
-				font-size: 14px;
+				font-size: 12px;
 				font-family: $site-third-font;
 				font-weight: $site-third-font-light;
 				line-height: normal;
 				margin: 0px;
 				border: none;
+				padding: 5px;
+				margin-bottom: 5px;
 
 				.close{
 					opacity: 1;
@@ -3581,19 +3592,23 @@ html{
 					right: 5px;
 					top: 0px;
 					font-size: 30px;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
 				}
 
 				h1, h2, h3, h4, h5, h6{
-					font-size: 16px;
+					font-size: 14px;
 					margin-bottom: 5px;
 					line-height: normal;
 				}
 
 				&.bg-danger{
 					background-color: $site-danger-color;
+					color: #fff !important;
 
 					& *{
-						color: #fff;
+						color: #fff !important;
 					}
 				}
 			}
@@ -3691,6 +3706,20 @@ html{
 				background-image: url(../static/images/down-arrow-white.svg);
 				background-size: 15px;
 
+				&.dark{
+					border-color: $site-dark-color;
+					color: $site-dark-color;
+					background-image: url(../static/images/down-arrow-dark.svg);
+
+					select{
+						color: $site-dark-color;
+					}
+
+					select option {
+					  background: rgba(255, 255, 255, 1.0);
+				}
+				}
+
 				select{
 					color: white;
 					font-size: 14px;
@@ -3733,12 +3762,13 @@ html{
 
 		.custom-check{
 			.check-block{
-				width: 35px;
-				height: 35px;
+				width: 25px;
+				height: 25px;
 				position: relative;
 				border: 1px solid;
 				display: inline-block;
 				vertical-align: top;
+				margin-top: 3px;
 
 				input[type="checkbox"]{
 					width: 100%;
@@ -3764,20 +3794,18 @@ html{
 					pointer-events: none;
 					visibility: hidden;
 					text-align: center;
-					line-height: 38px;
-					font-size: 25px;
+					line-height: 25px;
+					font-size: 20px;
 				}
 			}
 
 			label{
-				font-size: 21px;
-				line-height: 35px;
 				font-family: $site-third-font;
 				font-weight: $site-third-font-bold;
 				display: inline-block;
 				vertical-align: top;
 				max-width: 80%;
-				padding-left: 20px;
+				padding-left: 10px;
 			}
 		}
 	}
@@ -4058,29 +4086,11 @@ html{
 
 	/*overlay-cart*/
 	.overlay-cart{
-		width: 100%;
-		height: 100vh;
-		position: fixed;
-		left: 0px;
-		top: 0px;
-		z-index: 999658971268;
-		background-color: rgba(0,0,0,0.6);
+		
+		background-color: white;
 		color: $site-dark-color;
-		visibility: hidden;
-		pointer-events: none;
-
-		&.open{
-			visibility: visible;
-			pointer-events: auto;
-		}
 
 		.the-cart-holder{
-			float: right;
-			height: 100vh;
-			width: 475px;
-			overflow-y: auto;
-			background-color: #fff;
-			padding: 20px 40px;
 			color: $site-dark-color;
 
 			a{
@@ -4117,11 +4127,11 @@ html{
 			}
 
 			td{
-				padding: 30px 30px 30px 0;
+				padding: 30px 10px 30px 0;
 				border-bottom: 1px solid;
 				border-color: rgba($site-dark-color, 0.5);
-				font-size: 19px;
-				line-height: 30px;
+				font-size: 17px;
+				line-height: 25px;
 				font-family: $site-third-font;
 				font-weight: $site-third-font-regular;
 
@@ -4144,14 +4154,14 @@ html{
 			}
 
 			.product-thumb{
-				max-width: 100px;
+				max-width: 65px;
 				height: auto;
 				display: inline-block;
 			}
 
 			.title{
 				font-family: $primary-font;
-				font-size: 21px;
+				font-size: 19px;
 				text-transform: uppercase;
 			}
 		}
@@ -4204,7 +4214,14 @@ html{
 
 		& > .row{
 			& > .my-col{
-				margin-top: 140px;
+				margin-top: 70px;
+			}
+		}
+
+		&.entry{
+			p{
+				font-size: 15px;
+				line-height: 22px;
 			}
 		}
 
@@ -4215,8 +4232,8 @@ html{
 	/*ubershit popup*/
 	.fancybox-container{
 		.ubershit-popup{
-			width: 900px;
-			padding: 65px 65px 100px 65px;
+			width: 100%;
+			padding: 100px 25px;
 			background: url(../static/images/fancy-popup-back.svg) no-repeat left bottom;
 			background-size: cover;
 			color: $site-dark-color;
@@ -4237,15 +4254,15 @@ html{
 			}
 
 			.fancybox-close-small{
-				width: 35px;
-				height: 35px;
+				width: 25px;
+				height: 25px;
 				border: none;
 				padding: 0px;
 				margin: 0px;
 				background: url(../static/images/close-icon-dark.svg) no-repeat left top;
 				background-size: cover;
-				top: 60px;
-				right: 60px;
+				top: 25px;
+				right: 25px;
 				svg{
 					display: none;
 				}
