@@ -257,58 +257,6 @@ Herren</div>
 <script>
    import $$ from 'dom7';
    export default {
-     // custom 
-         on: {
-         pageMounted: function(e, page) {
-           this.$f7ready((f7) => {
-   
-   
-         
-            
-            // libs
-             var scriptOwl = ['static/js/lib/owl.carousel.js'];
-             $.getScript(scriptOwl, function(data, textStatus) {
-                 // info-tab-link-carousel var - 1
-                $('.kader-module .link-tab-varient.var-1 .info-tab-link-carousel .owl-carousel').owlCarousel({
-                        loop: false,
-                        dots: false,
-                        margin: 30,
-                        nav: false,
-                        items: 3,
-                    });
-
-
-                    $('.video-items-in-carousel .owl-carousel').owlCarousel({
-                        loop:false,
-                        dots:false,
-                        margin:40,
-                        nav:true,
-                        items:1,
-                    });  
-            });
-            // libs
-            
-            // calender
-            var NewsFilterCalendar = f7.calendar.create({
-              inputEl: '#news-list-datepicker',
-              on: {
-                change: function () {
-                  NewsFilterCalendar.close()
-                }
-              }
-            });
-
-            // the-termine-list
-            jQuery('.the-termine-list').click(function(){
-               jQuery(this).parent('.the-termin-list-group').find('.the-termine-list').not(this).find('.secondary').hide(); 
-               jQuery(this).find('.secondary').toggle();
-            });
-           
-   
-   
-           });
-         },
-     },
-     // custom
+     
    };
 </script>

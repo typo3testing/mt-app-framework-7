@@ -372,11 +372,11 @@ html{
 			}
 
 			li{
-				margin: 50px 0 0 0;
-				padding: 0 0 0 35px;
+				margin: 10px 0 0 0;
+				padding: 0 0 0 25px;
 				position: relative;
-				font-size: 21px;
-				line-height: 35px;
+				font-size: 12px;
+				line-height: 19px;
 				font-family: $site-third-font;
 				font-weight: $site-third-font-regular;
 
@@ -386,12 +386,12 @@ html{
 
 				&:before{
 					content: ' ';
-					width: 22px;
-					height: 22px;
+					width: 15px;
+					height: 15px;
 					position: absolute;
 					left: 0px;
 					top: 6px;
-					background-size: 22px;
+					background-size: 15px;
 					background-repeat: no-repeat;
 					background-position: left top;
 					background-image: url(../static/images/list-item-plus-sign.png);
@@ -3669,14 +3669,14 @@ html{
     		-moz-appearance: none;
     		appearance: none;
     		padding: 0px;
-    		font-size: 21px;
+    		font-size: 14px;
 		}
 	}
 
 
 	select{
 			letter-spacing: 0.7px;
-			font-size: 21px;
+			font-size: 14px;
 			color: $site-dark-color;
 			border: none;
 			background-color: transparent;
@@ -3733,7 +3733,7 @@ html{
 		
 
 			.text-input{
-				font-size: 21px;
+				font-size: 14px;
 				font-family: $site-third-font;
 				font-weight: $site-third-font-bold;
 				border: none;
@@ -3859,8 +3859,7 @@ html{
 		}
 
 		label{
-			display: inline-block;
-			vertical-align: middle;
+			display: block;
 			line-height: normal;
 			width: 125px;
 			padding: 0 5px 0 0;
@@ -3868,11 +3867,11 @@ html{
 			margin: 0px;
 			letter-spacing: 1.05px;
 			text-transform: uppercase;
+			margin-bottom: 10px;
 		}
 
 		.form-field{
-			display: inline-block;
-			vertical-align: middle;
+			display: block;
 
 			&.width-type-one{
 				width: 200px;
@@ -3913,8 +3912,8 @@ html{
 
 	.buy-button{
 		a{
-			display: inline-block;
-			padding: 15px 52px;
+			display: block;
+			padding: 15px;
 			text-align: center;
 			border-radius: 41px;
 			background-color: $site-danger-color;
@@ -3926,7 +3925,7 @@ html{
 			}
 
 			span{
-				font-size: 36px;
+				font-size: 20px;
 				letter-spacing: 1.8px;
 				color: #fff;
 				text-transform: uppercase;
@@ -4053,7 +4052,7 @@ html{
 
 	.cart-price-spliting-table{
 		text-align: left;
-		min-width: 420px;
+		
 
 		table{
 			width: 100%;
@@ -4105,6 +4104,24 @@ html{
 		}
 
 		.overlay-cart-table{
+
+			.site-form{
+				.incs-decs-number-value{
+					.value-button{
+						width: 30px;
+						height: 34px;
+						line-height: 34px;
+						font-size: 20px;
+					}
+
+					input{
+						width: 50px;
+						height: 34px;
+					}
+				}
+			}
+
+
 			table{
 				width: 100%;
 				margin: 0px;

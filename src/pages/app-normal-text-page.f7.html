@@ -1,0 +1,126 @@
+<template>
+   <div class="page has-no-top-banner" data-name="app-normal-text-page">
+      <!-- header -->
+      <header class="header scrolled">
+         <div class="main-wrap block-section default-left-right-padding clearfix">
+            <div class="row">
+               <!-- logo -->
+               <div class="col-xs-6 my-col no-top-margin clearfix">
+                  <div class="logo-block main-wrap clearfix">
+                     <a href="index.html"><img src="static/images/MT-Logo_white@2x.png"></a>
+                  </div>
+               </div>
+               <!-- logo -->
+               <!-- menu -->
+               <div class="col-xs-6 my-col no-top-margin clearfix">
+                  <div class="menu-wrap clearfix">
+                     <!-- main  menu -->
+                     <div class="main-menu clearfix">
+                        <div class="menu-hamberg">
+                        </div>
+                     </div>
+                     <!-- main  menu -->
+                  </div>
+               </div>
+               <!-- menu -->
+            </div>
+         </div>
+         <!-- mega menu -->
+         <div class="app-mega-menu animated slideOutRight clearfix">
+            <div class="main-holder">
+               <div class="menu-part">
+                  <ul>
+                     <li><a href="#"><span>MEIN PROFIL</span></a></li>
+                     <li><a href="#"><span>WARENKORB</span><i>3</i></a></li>
+                     <li><a href="#"><span>MEINE BESTELLUNGEN</span></a></li>
+                     <li><a href="#"><span>AUSLOGGEN</span></a></li>
+                  </ul>
+               </div>
+               <div class="menu-part type-two">
+                  <ul>
+                     <li><a href="#"><span>BENACHRICHTIGUNGEN</span></a></li>
+                     <li><a href="#"><span>KONTAKT</span></a></li>
+                     <li><a href="#"><span>MT WEBSITE</span></a></li>
+                     <li><a href="#"><span>HILFE</span></a></li>
+                     <li><a href="#"><span>DATENSCHUTZ</span></a></li>
+                     <li><a href="#"><span>IMPRESSUM</span></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- mega menu -->
+      </header>
+      <!-- header -->
+      <!-- Scrollable page content-->
+      <div class="page-content page-bottom-gap-type-one">
+        <!--  module  -->
+             <div class="block-section centered-container clearfix">
+                <div class="container-fluid clearfix">
+                    
+                      
+                     <!-- module header -->
+                         <div class="element element-gap-Lessnormal block-section clearfix">
+                            <div class="module-header pull-text-left danger clearfix">
+                                 <h2>Normal Text<span>Content</span></h2>
+                             </div>
+                        </div>
+                    <!-- module header -->
+
+
+                    <!--entry -->
+                    <div class="entry clearfix">
+
+                      <h1>This is h1 heading</h1>
+
+                      <h2>This is h2 heading</h2>
+
+                      <h3>This is h3 heading</h3>
+
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt <a href="#">mollit anim id est laborum</a>.</p>
+
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                      </ul>
+                    </div>
+                    
+                    <!-- entry -->
+
+
+
+                </div>
+            </div>
+           <!-- module  -->
+      </div>
+      <!-- Scrollable page content-->
+   </div>
+</template>
+<script>
+   import $$ from 'dom7';
+   export default {
+     // custom 
+         on: {
+         pageMounted: function(e, page) {
+           this.$f7ready((f7) => {
+   
+   
+         
+            
+            // libs
+             var scriptOwl = ['static/js/lib/jquery.fancybox.js'];
+             $.getScript(scriptOwl, function(data, textStatus) {
+                
+            });
+            // libs
+           
+   
+   
+           });
+         },
+     },
+     // custom
+   };
+</script>
