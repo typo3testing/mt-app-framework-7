@@ -27,6 +27,7 @@ import AppProductListingPage from '../pages/app-product-list-page.f7.html';
 import AppProductBuyPage from '../pages/app-product-buy-page.f7.html';
 import AppCheckoutPage from '../pages/app-checkout-page.f7.html';
 import AppNormalTextPage from '../pages/app-normal-text-page.f7.html';
+import AppMainBestellungPage from '../pages/app-main-bestellung-page.f7.html';
 
 
 
@@ -105,6 +106,10 @@ var routes = [
   {
     path: '/app-normal-text-page/',
     component: AppNormalTextPage,
+  },
+  {
+    path: '/app-main-bestellung-page/',
+    component: AppMainBestellungPage,
   },
   {
     path: '/home/',

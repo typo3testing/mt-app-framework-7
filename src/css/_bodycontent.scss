@@ -7,6 +7,11 @@ html{
 
 	.preloader-modal{background: transparent;}
 
+
+	.row{
+		display: inherit;
+	}
+
 	.similar-no-banner-padding-top{
 		padding-top: 110px;
 	}
@@ -4299,19 +4304,15 @@ html{
 
 			& > .flex-column{
 				flex-grow: 1;
-				width: 25%;
+				width: 33%;
 				padding-left: 5px;
 				padding-right: 5px;
-
-				&:first-child{
-					width: 50%;
-				}
 			}
 		}
 
 		.main-head{
 			padding-left: 25px;
-			padding-right: 65px;
+			padding-right: 25px;
 
 			ul{
 				list-style: none;
@@ -4323,7 +4324,7 @@ html{
 					margin: 0px;
 					padding-top: 20px;
 					padding-bottom: 20px;
-					font-size: 19px;
+					font-size: 14px;
 					font-family: $site-third-font;
 					font-weight: $site-third-font-bold;
 				}
@@ -4332,7 +4333,7 @@ html{
 
 
 		.accordion-box{
-			padding: 25px 65px 25px 25px;
+			padding: 70px 25px 25px 25px;
 			border-radius: 20px;
 			background-color: $site-dark-color-type-three;
 			position: relative;
@@ -4365,7 +4366,7 @@ html{
 
 			.accordion-head{
 				& > div{
-					font-size: 19px;
+					font-size: 14px;
 					font-family: $site-third-font;
 					font-weight: $site-third-font-regular;
 					line-height: normal;
@@ -4381,7 +4382,7 @@ html{
 				& > div{
 					padding-top: 20px;
 					padding-bottom: 20px;
-					font-size: 19px;
+					font-size: 14px;
 					font-family: $site-third-font;
 					font-weight: $site-third-font-regular;
 					line-height: normal;
@@ -4395,39 +4396,38 @@ html{
 				border-top: 2px solid $site-dark-color-type-three-dark;
 
 				.product-img{
-					width: 100px;
-					text-align: center;
-					margin-right: 10px;
-					display: inline-block;
-					vertical-align: top;
+					
+					
+					display: block;
+					margin-bottom: 10px;
 
 					img{
 						display: inline-block;
+						max-width: 100px;
 					}
 				}
 
 				.product-info{
-					display: inline-block;
-					vertical-align: top;
+					display: block;
 
 					.primary{
 						font-family: $site-third-font;
 						font-weight: $site-third-font-bold;
-						font-size: 19px;
-						margin-bottom: 20px;
+						font-size: 14px;
+						margin-bottom: 5px;
 					}
 
 					.secondary{
 						font-family: $site-third-font;
 						font-weight: $site-third-font-regular;
-						font-size: 17px;
+						font-size: 12px;
 					}
 				}
 
 				.product-price{
 					font-family: $site-third-font;
 					font-weight: $site-third-font-regular;
-					font-size: 19px;
+					font-size: 14px;
 				} 
 			}
 		}	
