@@ -257,6 +257,36 @@ Herren</div>
 <script>
    import $$ from 'dom7';
    export default {
+
+    // custom 
+         on: {
+         pageMounted: function(e, page) {
+           this.$f7ready((f7) => {
+   
+   
+         
+            
+            
+            
+            // app-mega-menu
+        
+
+          jQuery('.main-menu').click(function(){
+            jQuery('.app-mega-menu').show();
+            jQuery('.app-mega-menu').toggleClass('slideInRight');
+            jQuery('.app-mega-menu').toggleClass('slideOutRight');
+            jQuery('header.header').toggleClass('app-menu-open');
+            jQuery('.menu-hamberg').toggleClass('active');
+          }); 
+      // app-mega-menu
+      
+           
+   
+   
+           });
+         },
+     },
+     // custom
      
    };
 </script>

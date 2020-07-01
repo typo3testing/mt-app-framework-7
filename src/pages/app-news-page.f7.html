@@ -439,6 +439,19 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
             });
             // libs
             
+            // app-mega-menu
+        
+
+          jQuery('.main-menu').click(function(){
+            jQuery('.app-mega-menu').show();
+            jQuery('.app-mega-menu').toggleClass('slideInRight');
+            jQuery('.app-mega-menu').toggleClass('slideOutRight');
+            jQuery('header.header').toggleClass('app-menu-open');
+            jQuery('.menu-hamberg').toggleClass('active');
+          }); 
+      // app-mega-menu
+        
+
             // calender
             var NewsFilterCalendar = f7.calendar.create({
               inputEl: '#news-list-datepicker',
