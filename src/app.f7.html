@@ -139,6 +139,18 @@ import $$ from 'dom7';
 
           // set back end
           
+          // app-mega-menu
+        
+
+          jQuery('.main-menu').click(function(){
+            jQuery(this).parents('.page').find('.app-mega-menu').show();
+            jQuery(this).parents('.page').find('.app-mega-menu').toggleClass('slideInRight');
+            jQuery(this).parents('.page').find('.app-mega-menu').toggleClass('slideOutRight');
+            jQuery(this).parents('.page').find('header.header').toggleClass('app-menu-open');
+            jQuery(this).parents('.page').find('.menu-hamberg').toggleClass('active');
+          }); 
+      // app-mega-menu
+          
           // custom overlay
           jQuery('.begining-view-overlay').parents('.app-custom-safe-area').addClass('has-beging-overlay');
           jQuery('.close-overlay').click(function(){
@@ -152,17 +164,7 @@ import $$ from 'dom7';
           });
           // custom overlay
           
-          // app-mega-menu
-        
-
-          jQuery('.main-menu').click(function(){
-            jQuery('.app-mega-menu').show();
-            jQuery('.app-mega-menu').toggleClass('slideInRight');
-            jQuery('.app-mega-menu').toggleClass('slideOutRight');
-            jQuery('header.header').toggleClass('app-menu-open');
-            jQuery('.menu-hamberg').toggleClass('active');
-          }); 
-      // app-mega-menu
+          
       
       // general back link
       jQuery('.trigger-initiate-back-link').click(function(){
