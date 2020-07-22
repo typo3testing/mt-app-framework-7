@@ -822,8 +822,10 @@ export default {
             });
 
 
-            jQuery(document).on("click", ".trigger-extended-info",  function(){
+            jQuery(document).on("click", ".trigger-extended-info",  function(e){
+              jQuery('.tebelle-app-extended-info').hide();
               jQuery(this).find('.tebelle-app-extended-info').show();
+              e.stopPropagation();
             });
              // the-tabelle.app-view
             

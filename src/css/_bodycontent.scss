@@ -479,6 +479,10 @@ html{
 			line-height: 35px;
 		}
 	}
+
+	.youtubedetail p{
+		margin-bottom: 0;
+	}
 	
 	.block-section{
 		display: block;
@@ -774,7 +778,7 @@ html{
 			}
 		}
 
-		&.danger{
+		&.danger, &.color-red{
 
 			color: $site-danger-color !important;
 			border-color: $site-danger-color !important;
@@ -3579,6 +3583,10 @@ html{
 		.form-field{
 			position: relative;
 
+			.field-wrap{
+				position: relative;
+			}
+
 			.alert{
 				width: 100%;
 				left: 0px;
@@ -3716,6 +3724,10 @@ html{
 					color: $site-dark-color;
 					background-image: url(../static/images/down-arrow-dark.svg);
 
+					&.danger{
+						border-color: $site-danger-color;
+					}
+
 					select{
 						color: $site-dark-color;
 					}
@@ -3747,7 +3759,7 @@ html{
 				height: 30px;
 				width: 100%;
 
-				&.danger{
+				&.danger, &.input-invalid{
 					color: $site-danger-color;
 
 					&::placeholder{
@@ -3774,6 +3786,10 @@ html{
 				display: inline-block;
 				vertical-align: top;
 				margin-top: 3px;
+
+				&.danger{
+					border-color: $site-danger-color;
+				}
 
 				input[type="checkbox"]{
 					width: 100%;
@@ -4697,6 +4713,15 @@ html{
 		}
 	}
 	/*login-box*/
+
+	/* Video List */
+	.video-content-element {
+		.my-col {
+			&:nth-child(2n+1){
+				clear: left;
+			}
+		}
+	}
 
 
 }
