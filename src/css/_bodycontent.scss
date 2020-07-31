@@ -4349,21 +4349,21 @@ html{
 
 
 		.accordion-box{
-			padding: 70px 25px 25px 25px;
-			border-radius: 20px;
+			padding: 15px 40px 15px 15px;
+			border-radius: 10px;
 			background-color: $site-dark-color-type-three;
 			position: relative;
 			margin-bottom: 10px;
 
 			.accordion-trigger{
-				width: 65px;
-				height: 19px;
+				width: 40px;
+				height: 50px;
 				position: absolute;
 				right: 0px;
-				top: 30px;
+				top: 0px;
 				background-position: center center;
 				background-repeat: no-repeat;
-				background-size: 32px;
+				background-size: 20px;
 				background-image: url(../static/images/down-arrow-white.svg);
 				cursor: pointer;
 				transition: all 0.3s ease 0s;
