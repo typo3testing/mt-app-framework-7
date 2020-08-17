@@ -726,6 +726,16 @@ html{
 		display: inline-block;
 		transition: none;
 
+		&.mobile-display-block {
+    		width: 100%;
+    		text-align: center !important;
+
+    		span{
+    			display: block;
+    			text-align: center !important;
+    		}
+		}
+
 		&.block-button{
 			display: block;
 
@@ -3994,6 +4004,40 @@ html{
 
 	/*cart-table*/
 	.cart-table{
+
+		.site-form{
+            .incs-decs-number-value{
+              input{
+                width: 50px;
+                height: 40px;
+              }
+
+              .value-button{
+                width: 30px;
+                height: 40px;
+                line-height: 40px;
+              }
+            }
+          }
+
+		.mobile-cart-view{
+                
+
+                td{
+                  border: none !important;
+                }
+              }
+
+
+
+          .mobile-cart-info-title{
+            font-size: 12px;
+            font-family: $site-third-font;
+            font-weight: $site-third-font-bold;
+            margin-bottom: 5px;
+          }      
+
+
 		table{
 			width: 100%;
 
@@ -4020,7 +4064,7 @@ html{
 
 		tbody{
 			td{
-				padding: 30px 30px 30px 0;
+				padding: 15px 15px 15px 0;
 				vertical-align: top;
 				border-bottom: 2px solid;
 				border-color: rgba(255,255,255,0.5);
@@ -4031,15 +4075,20 @@ html{
 
 
 				p{
-					font-size: 21px;
-					line-height: 30px;	
+					font-size: 12px;
+					line-height: normal;	
 				}
+
+				&.cart-product-inc-ded-qty{
+                	min-width: 130px;
+              	}
 			}
 
 			.cart-product-img{
+				text-align: left !important;
 				img{
 					display: inline-block;
-					max-width: 100px;
+					max-width: 50px;
 					height: auto;
 				}
 			}
@@ -4049,16 +4098,17 @@ html{
 					display: block;
 
 					&.primary{
-						font-size: 36px;
+						font-size: 21px;
 						letter-spacing: 0.36px;
-						line-height: 48px;
+						line-height: 28px;
+						margin-bottom: 5px;
 						text-transform: uppercase;
 					}
 
 					&.secondary{
 						font-family: $site-third-font;
 						font-weight: $site-third-font-regular;
-						font-size: 17px;
+						font-size: 15px;
 						line-height: 25px;
 					}
 				}
@@ -4317,6 +4367,7 @@ html{
 			flex-wrap: wrap;
 			margin-left: -5px;
 			margin-right: -5px;
+			padding-right: 25px;
 
 			& > .flex-column{
 				flex-grow: 1;
@@ -4327,8 +4378,8 @@ html{
 		}
 
 		.main-head{
-			padding-left: 25px;
-			padding-right: 25px;
+			padding-left: 15px;
+			padding-right: 30px;
 
 			ul{
 				list-style: none;
@@ -4349,7 +4400,7 @@ html{
 
 
 		.accordion-box{
-			padding: 15px 40px 15px 15px;
+			padding: 15px;
 			border-radius: 10px;
 			background-color: $site-dark-color-type-three;
 			position: relative;
@@ -4376,7 +4427,7 @@ html{
 
 			.collapsed-area{
 				display: none;
-				border-top: 2px solid;
+				border-top: 1px solid #9c9c9c;
 				margin-top: 20px;
 			}
 
