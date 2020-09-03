@@ -1,13 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
 @font-face {
+    font-family: 'Triester Sans Outline';
+    src: url('../fonts/TriesterSansOutline-Regular.eot');
+    src: url('../fonts/TriesterSansOutline-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TriesterSansOutline-Regular.woff2') format('woff2'),
+        url('../fonts/TriesterSansOutline-Regular.woff') format('woff'),
+        url('../fonts/TriesterSansOutline-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Triester Sans';
+    src: url('../fonts/TriesterSans-Regular.eot');
+    src: url('../fonts/TriesterSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TriesterSans-Regular.woff2') format('woff2'),
+        url('../fonts/TriesterSans-Regular.woff') format('woff'),
+        url('../fonts/TriesterSans-Regular.ttf') format('truetype'),
+        url('../fonts/TriesterSans-Regular.svg#TriesterSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+/*@font-face {
     font-family: 'triester_sansregular';
     src: url('../fonts/triester_sans-webfont.woff2') format('woff2'),
          url('../fonts/triester_sans-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
 
 @font-face {
     font-family: 'axisextra_bold';
@@ -19,14 +48,14 @@
 }
 
 
-@font-face {
+/*@font-face {
     font-family: 'triester_sans_outlineregular';
     src: url('../fonts/triester_sans_outline-webfont.woff2') format('woff2'),
          url('../fonts/triester_sans_outline-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
 
 
 @font-face {
